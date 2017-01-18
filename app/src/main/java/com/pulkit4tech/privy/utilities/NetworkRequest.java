@@ -206,7 +206,6 @@ public class NetworkRequest {
         } catch (JSONException e) {
             Log.d(DEBUG, e.toString());
         }
-        Log.d(DEBUG, jsonObject.toString());
         return jsonObject;
     }
 

@@ -209,6 +209,7 @@ public class PrivyMapsFragment extends Fragment implements OnMapReadyCallback, G
 
     @Override
     public void onConnected(@Nullable Bundle bundle) {
+        startLocationUpdates();
         myLocationData = com.google.android.gms.location.LocationServices.FusedLocationApi.getLastLocation(
                 mGoogleApiClient);
         if (myLocationData == null) {
@@ -218,8 +219,6 @@ public class PrivyMapsFragment extends Fragment implements OnMapReadyCallback, G
         } else {
             getMyCurrentLocation();
         }
-
-        startLocationUpdates();
     }
 
     private Location getCurrentLocation() {
@@ -241,7 +240,7 @@ public class PrivyMapsFragment extends Fragment implements OnMapReadyCallback, G
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        snackMsg("Can't connect to Google Api Client");
+        snackMsg(getString(R.string.google_api_client_connection_failed));
     }
 
 
