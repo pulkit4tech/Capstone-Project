@@ -36,4 +36,11 @@
     <string name="enable_gps_msg">Please enable GPS for better results.</string>
     <string name="gps_enable_request_success">Thank you for enabling gps.</string>
     <string name="turn_on">TURN ON</string>
+    <string name="profile_pic">Profile Pic</string>
+    <string name="name">Name :</string>
+    <string name="geometry">Geometry :</string>
+    <string name="open_now">Open Now :</string>
+    <string name="vicinity">Vicinity :</string>
+    <string name="ratings">Ratings :</string>
+    <string name="directions">Directions</string>
 </resources>
