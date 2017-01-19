@@ -39,6 +39,11 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".PrivyDetailsActivity"></activity>
+
+        <provider
+            android:authorities="com.pulkit4tech.privy.PrivyProvider"
+            android:name=".utilities.PrivyProvider"
+            android:exported="false"/>
     </application>
 
 </manifest>

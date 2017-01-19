@@ -14,6 +14,7 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.CursorLoader;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,7 +43,7 @@ import static com.pulkit4tech.privy.constants.Constants.DEBUG;
 import static com.pulkit4tech.privy.constants.Constants.CAMERA_ANIMATION_DURATION;
 import static com.pulkit4tech.privy.constants.Constants.MY_PERMISSIONS_REQUEST_FINE_LOCATIONS;
 
-public class PrivyMapsFragment extends Fragment implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
+public class PrivyMapsFragment extends Fragment implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener{
 
     private GoogleMap mMap;
     private Context mContext;
@@ -129,7 +130,6 @@ public class PrivyMapsFragment extends Fragment implements OnMapReadyCallback, G
 //
 //        LatLng delhi2 = new LatLng(28.633511, 77.219444);
 //        mMap.addMarker(new MarkerOptions().position(delhi2).anchor(.5f, .5f).title("Test Marker in Home2").icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
-
     }
 
     private void setUpMapInfo() {
@@ -289,4 +289,5 @@ public class PrivyMapsFragment extends Fragment implements OnMapReadyCallback, G
     public void onLocationChanged(Location location) {
         getMyCurrentLocation();
     }
+
 }
