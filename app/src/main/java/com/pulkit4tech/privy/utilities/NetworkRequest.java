@@ -119,6 +119,7 @@ public class NetworkRequest implements LoaderManager.LoaderCallbacks<Cursor>{
                     Log.e(DEBUG, post.toString());
                 }
             } else {
+                deleteDataLocally();
                 addMarkers(post);
             }
             addMarkerListner();
@@ -162,6 +163,15 @@ public class NetworkRequest implements LoaderManager.LoaderCallbacks<Cursor>{
                 values
         );
         Log.d(DEBUG, "Inserted to database : " + uri.toString());
+    }
+
+    private void deleteDataLocally(){
+        int del = mContext.getContentResolver().delete(
+                PrivyProvider.CONTENT_URI,
+                null,
+                null
+        );
+        Log.d(DEBUG, "Delete Rows : " + del);
     }
 
     private Response.ErrorListener getErrorListner = new Response.ErrorListener() {
