@@ -50,4 +50,6 @@
     <string name="language_default">en</string>
     <string name="toolbar_title_privy_details">Privy Details</string>
     <string name="google_api_client_connection_failed">Can\'t connect to Google Api Client</string>
+    <string name="appwidget_text">Privy Near Me</string>
+    <string name="add_widget">Add widget</string>
 </resources>

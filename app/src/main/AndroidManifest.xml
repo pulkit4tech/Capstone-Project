@@ -38,12 +38,22 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".PrivyDetailsActivity"></activity>
+        <activity android:name=".PrivyDetailsActivity" />
 
         <provider
-            android:authorities="com.pulkit4tech.privy.PrivyProvider"
             android:name=".utilities.PrivyProvider"
-            android:exported="false"/>
+            android:authorities="com.pulkit4tech.privy.PrivyProvider"
+            android:exported="false" />
+
+        <receiver android:name=".PrivyAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/privy_app_widget_info" />
+        </receiver>
     </application>
 
 </manifest>
